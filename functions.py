@@ -9,7 +9,7 @@ def get_win_conditions_list():
 
 
 def get_player1_sign():
-    player1_sign = input("Plyaer 1: \nChoose between 'X' and 'O'! ").upper()
+    player1_sign = input("Player 1: \nChoose between 'X' and 'O'! ").upper()
     if player1_sign == "X" or player1_sign == "O":
         return player1_sign
     else:
@@ -17,7 +17,7 @@ def get_player1_sign():
         get_player1_sign()
 
 
-def get_play2_sign(player1_sign):
+def get_player2_sign(player1_sign):
     if player1_sign == "X":
         player2_sign = "O"
         print("So Player 2's sign is " + player2_sign + "!")
@@ -42,15 +42,22 @@ def get_player_input():
     return player_input
 
 
-def input_check(player_input, checklist):
+def remove_input_from_checklist(player_input, checklist):
     for i in range(len(checklist)):
         if player_input == str(checklist[i]):
             checklist.remove(checklist[i])
             return checklist
-        else:
-            print("Invalid input!")
-            input_check(get_player_input(), checklist)
     return checklist
+
+
+def input_check(player_input, checklist):
+    for i in range(len(checklist)):
+        if player_input == str(checklist[i]):
+            return player_input
+    print("Invalid input!")
+    player_input = get_player_input()
+    input_check(player_input, checklist)
+    return player_input
 
 
 def set_mark_on_table(player_input, table, sign):
@@ -63,9 +70,9 @@ def add_sign_to_win_cons(win_conditions_list, player_input, sign):
     return win_conditions_list
 
 
-#def win_check(win_conditions_list, sign):
- #   for i in win_conditions_list:
-  #      for w in range(len(i) - 1):
-   #         if i[w] == sign and i[w + 1] == sign and i[w + 2] == sign:
-    #            print("Congratulations! " + sign + " wins!")
-     #           quit()
+def win_check(win_conditions_list, sign):
+    for i in win_conditions_list:
+        for w in range(len(i) - 1):
+            if i[w] == sign and i[w + 1] == sign and i[w + 2] == sign:
+                print("Congratulations! " + sign + " wins!")
+                quit()
