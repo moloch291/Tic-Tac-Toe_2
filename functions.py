@@ -56,7 +56,7 @@ def input_check(player_input, checklist):
     for i in range(len(checklist)):
         if player_input == str(checklist[i]):
             return player_input
-    print("Invalid input!")
+    print("Invalid input! \nPlease see the table for reasonable choices!")
     player_input = get_player_input()
     input_check(player_input, checklist)
     return player_input
@@ -74,7 +74,6 @@ def add_sign_to_win_cons(win_conditions_list, player_input, sign):
 
 def win_check(win_conditions_list, sign):
     for i in win_conditions_list:
-        for w in range(len(i) - 1):
-            if i[w] == sign and i[w + 1] == sign and i[w + 2] == sign:
-                print("Congratulations! " + sign + " wins!")
-                quit()
+        if i[0] == sign and i[1] == sign and i[2] == sign:
+            print("Congratulations! " + sign + " wins!")
+            quit()
