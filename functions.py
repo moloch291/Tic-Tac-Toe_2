@@ -1,3 +1,6 @@
+import menu
+
+
 def get_table():
     table = "  1 | 2 | 3 \n____|___|____ \n  4 | 5 | 6 \n____|___|____ \n  7 | 8 | 9  \n    |   |   "
     return table
@@ -77,4 +80,4 @@ def win_check(win_conditions_list, sign):
     for i in win_conditions_list:
         if i[0] == sign and i[1] == sign and i[2] == sign:
             print("Congratulations! " + sign + " wins!")
-            quit()
+            menu.menu()

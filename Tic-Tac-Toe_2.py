@@ -1,13 +1,9 @@
-import game_cycle
+import menu
 
 
 def main():
     print("Let's play a Tic-Tac-Toe! \nChoose your signs!")
-    game()
-
-
-def multiplayer_game():
-    game_cycle.multiplayer_game_cycle()
+    menu.menu()
 
 
 if __name__ == '__main__':
