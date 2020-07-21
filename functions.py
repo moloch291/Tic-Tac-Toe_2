@@ -40,6 +40,7 @@ def get_checklist(win_conditions_list):
 def get_player_input():
     player_input = input("Choose a field to mark! ")
     if player_input == "quit":
+        print("Good bye!")
         quit()
     return player_input
 
