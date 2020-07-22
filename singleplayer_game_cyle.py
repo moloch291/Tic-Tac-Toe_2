@@ -20,7 +20,7 @@ def single_player_game_cycle():
             print(table)
         else:
             print("Player 2: ")
-            player_input = ai.offensive_instinct(checklist, win_conditions_list, player1_sign, player2_sign)
+            player_input = ai.defensive_and_offensive_instinct(checklist, win_conditions_list, player1_sign, player2_sign)
             checklist = functions.remove_input_from_checklist(player_input, checklist)
             table = functions.set_mark_on_table(player_input, table, player2_sign)
             win_conditions_list = functions.add_sign_to_win_cons(win_conditions_list, player_input, player2_sign)
