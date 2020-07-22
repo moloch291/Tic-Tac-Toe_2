@@ -20,7 +20,7 @@ def single_player_game_cycle():
             print(table)
         else:
             print("Player 2: ")
-            player_input = ai.choose_a_field(checklist, win_conditions_list, player1_sign)
+            player_input = ai.choose_a_field(checklist, win_conditions_list, player1_sign, player2_sign)
             print(player_input)
             checklist = functions.remove_input_from_checklist(player_input, checklist)
             table = functions.set_mark_on_table(player_input, table, player2_sign)
