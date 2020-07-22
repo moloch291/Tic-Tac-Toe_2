@@ -3,7 +3,7 @@ import multiplayer_game_cycle
 
 
 def menu():
-    player_choice = input("Menu:\nChoose an option:\n1: Single-player mode\n2: Multiplayer mode\n3: Quit\n ")
+    player_choice = input("Menu:\nChoose an option:\n1: Single-player mode\n2: Multiplayer mode\n3: Quit\n")
     if player_choice == "1":
         singleplayer_game_cyle.single_player_game_cycle()
     elif player_choice == "2":

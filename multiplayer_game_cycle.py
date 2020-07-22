@@ -15,7 +15,7 @@ def multiplayer_game_cycle():
             checklist = functions.remove_input_from_checklist(player_input, checklist)
             table = functions.set_mark_on_table(player_input, table, player1_sign)
             win_conditions_list = functions.add_sign_to_win_cons(win_conditions_list, player_input, player1_sign)
-            functions.win_check(win_conditions_list, player1_sign)
+            functions.win_check(win_conditions_list, player1_sign, table)
             print(table)
         else:
             print("Player 2: ")
@@ -23,6 +23,6 @@ def multiplayer_game_cycle():
             checklist = functions.remove_input_from_checklist(player_input, checklist)
             table = functions.set_mark_on_table(player_input, table, player2_sign)
             win_conditions_list = functions.add_sign_to_win_cons(win_conditions_list, player_input, player2_sign)
-            functions.win_check(win_conditions_list, player2_sign)
+            functions.win_check(win_conditions_list, player2_sign, table)
             print(table)
     print("No winner this time... C'mon, it's an easy game!")
