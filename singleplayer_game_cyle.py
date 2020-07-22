@@ -1,5 +1,5 @@
 import functions
-import random
+import ai
 
 
 def single_player_game_cycle():
@@ -20,15 +20,13 @@ def single_player_game_cycle():
             print(table)
         else:
             print("Player 2: ")
-            player_input = choose_a_field(checklist)
+            player_input = ai.choose_a_field(checklist, win_conditions_list, player1_sign)
+            print(player_input)
             checklist = functions.remove_input_from_checklist(player_input, checklist)
             table = functions.set_mark_on_table(player_input, table, player2_sign)
             win_conditions_list = functions.add_sign_to_win_cons(win_conditions_list, player_input, player2_sign)
             functions.win_check(win_conditions_list, player2_sign)
             print(table)
+            print(checklist)
+            print(win_conditions_list)
     print("No winner this time... C'mon, it's an easy game!")
-
-
-def choose_a_field(checklist):
-    player_input = str(random.choice(checklist))
-    return player_input

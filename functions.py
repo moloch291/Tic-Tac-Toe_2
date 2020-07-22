@@ -60,7 +60,7 @@ def input_check(player_input, checklist):
     for i in range(len(checklist)):
         if player_input == str(checklist[i]):
             return player_input
-    print("Invalid input! \nPlease see the table for reasonable choices!")
+    print("Invalid input! \nPlease see the table for reasonable choices or type 'quit'!")
     player_input = get_player_input()
     input_check(player_input, checklist)
     return player_input
