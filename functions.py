@@ -76,8 +76,9 @@ def add_sign_to_win_cons(win_conditions_list, player_input, sign):
     return win_conditions_list
 
 
-def win_check(win_conditions_list, sign):
+def win_check(win_conditions_list, sign, table):
     for i in win_conditions_list:
         if i[0] == sign and i[1] == sign and i[2] == sign:
+            print(table)
             print("Congratulations! " + sign + " wins!")
             menu.menu()
