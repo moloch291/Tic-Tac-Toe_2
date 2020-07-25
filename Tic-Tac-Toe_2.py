@@ -10,8 +10,5 @@ if __name__ == '__main__':
     main()
 
 
-#tie in multi player
 #clearing terminal after movements
 #single player who starts?
-#singleplayer crash fix!!!
-#mulitplayer crash fix!!!

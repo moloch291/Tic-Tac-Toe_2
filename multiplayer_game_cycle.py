@@ -8,7 +8,7 @@ def multiplayer_game_cycle():
     player2_sign = functions.get_player2_sign(player1_sign)
     checklist = functions.get_checklist(win_conditions_list)
     print(table)
-    for i in range(0, 10):
+    for i in range(0, 9):
         if i % 2 == 0:
             print("Player 1:")
             player_input = functions.input_check(functions.get_player_input(), checklist)
