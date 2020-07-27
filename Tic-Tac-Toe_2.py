@@ -9,6 +9,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-#clearing terminal after movements
 #single player who starts?
